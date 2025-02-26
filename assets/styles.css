@@ -6,9 +6,14 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
-    margin-top: 0px;
+    margin-top: 20px;
     padding: 0;
     font-family: 'Arial', sans-serif;
+    background-color: #a7dfdf;
+}
+h1{
+    color: #035157;
+    margin-top: 30px;
 }
 
 header {
@@ -16,8 +21,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #7d83d9;
+    background-color: #035157;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forms{
+    padding: 15px;
+    font-weight: bold;
+}
+
+button{
+    border-style: solid;
+}
+
+input, textarea {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .material-symbols-outlined {
@@ -50,7 +69,7 @@ nav {
 .menu {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: 45px;
     /* Espacement entre les éléments du menu */
     padding: 0;
     margin: 0;
@@ -62,9 +81,9 @@ nav {
 
 .menu a {
     text-decoration: none;
-    font-size: 25px;
+    font-size: 27px;
     font-family: 'Pacifico', serif;
-    color: #333;
+    color: #a7dfdf;
     transition: color 0.3s ease;
 }
 
@@ -107,7 +126,7 @@ nav {
         gap: 30px;
         /* Réduire l'espacement entre les éléments du menu */
     }
-
+²
     .menu li {
         display: block;
     }

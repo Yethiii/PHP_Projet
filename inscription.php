@@ -16,7 +16,7 @@ if (VerifierUtiSession()) {
 
 <h1>Formulaire d'inscription</h1>
 
-<form method="post" action="">
+<form method="post" action="" class="forms">
 
     <label for="nom"> Nom : </label>
     <br>

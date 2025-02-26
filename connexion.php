@@ -17,7 +17,7 @@ if (VerifierUtiSession()) {
 
 <h1>Connexion</h1>
 
-<form method="post" action="">
+<form method="post" action="" class="forms">
 
     <label for="pseudo"> Pseudo : </label>
     <br>
