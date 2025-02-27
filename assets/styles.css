@@ -91,6 +91,12 @@ nav {
     color: #6f6d6f;
 }
 
+.carousel-item img {
+    width: 100vw;
+    height: 40vh; /* 60% de la hauteur de l'écran */
+    object-fit: cover;
+}
+
 /* Partie mobile : cacher le menu par défaut */
 
 @media (max-width: 768px) {
