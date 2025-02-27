@@ -10,6 +10,8 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . 'core/traitement_formulaire.php';
 
 ?>
 
+<body class="page-contact">
+<div class="contenu">
 <h1>Formulaire de contact</h1>
 
 <form method="post" action="" class="forms">
@@ -36,10 +38,10 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . 'core/traitement_formulaire.php';
     <br>
     <textarea name="message" id="message" placeholder="Votre message ici !" required minlength="10" maxlength="3000" aria-invalid="<?= isset($arrayerrors["message"]) ? "true" : "false" ?>" aria-describedby="message_invalide"><?= htmlspecialchars($_POST['message'] ?? '') ?></textarea>
     <p id="message_invalide" class="error-message"><?= implode('<br>', ($arrayerrors['message'] ?? [])) ?></p>
-    <button type="submit">Envoyer mon message</button>
+    <button type="submit" class="btn btn-secondary">Envoyer mon message</button>
 
 </form>
-
+</div>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

@@ -14,6 +14,8 @@ if (VerifierUtiSession()) {
 }
 ?>
 
+<body class="page-inscription">
+    <div class="contenu">
 <h1>Formulaire d'inscription</h1>
 
 <form method="post" action="" class="forms">
@@ -56,10 +58,10 @@ if (VerifierUtiSession()) {
     <br>
     <p id=" email_invalide" class="error-message"><?= implode('<br>', ($arrayerrors['email'] ?? [])) ?></p>
 
-    <button type="submit">Valider mon inscription</button>
+    <button type="submit" class="btn btn-secondary">Valider mon inscription</button>
 
 </form>
-
+    </div>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

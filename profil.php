@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 ?>
-
+    <body class="page-profil">
+<div class="contenu">
 <h1>Mon profil</h1>
 <p>ID : <?= htmlspecialchars($utilisateur['uti_id']) ?></p>
 <p>Nom : <?= htmlspecialchars($utilisateur['uti_nom']) ?></p>
@@ -35,6 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <form method="post" action="">
     <button type="submit">Déconnexion</button>
 </form>
-
+</div>
 
 <?php require_once __DIR__ . DIRECTORY_SEPARATOR . 'footer.php'; ?>

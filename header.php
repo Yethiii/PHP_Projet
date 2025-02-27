@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./assets/bootstrap.min.css">
 
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 
         <title><?= $pageTitre ?></title>
     </head>
@@ -37,7 +37,7 @@
                 <div class="carousel-item active">
                     <img src="./img/banner_laetitia.png" class="d-block w-100">
                     <div class="carousel-caption d-flex flex-column align-items-center">
-                        <a href="/contact.php" class="btn btn-primary mt-3">Contactez-moi</a>
+                        <a href="/contact.php" class="btn btn-secondary mt-3">Contactez-moi</a>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -46,7 +46,7 @@
                 <div class="carousel-item">
                     <img src="./img/banner_newsletter.jpg" class="d-block w-100">
                     <div class="carousel-caption d-flex flex-column align-items-center">
-                        <a href="inscription.php" class="btn btn-primary mt-3">Rejoins-nous dès maintenant</a>
+                        <a href="inscription.php" class="btn btn-secondary mt-3">Rejoins-nous dès maintenant</a>
                     </div>
                 </div>
             </div>

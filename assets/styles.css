@@ -25,13 +25,16 @@ header {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.page-index, .page-inscription, .page-connexion, .page-contact, .page-profil {
+    background-color: #d2dfdf;
+}
+.contenu {
+    padding: 20px;
+}
+
 .forms{
     padding: 15px;
     font-weight: bold;
-}
-
-button{
-    border-style: solid;
 }
 
 input, textarea {
@@ -45,6 +48,7 @@ input, textarea {
         'wght' 400,
         'GRAD' 0,
         'opsz' 24;
+    color:#a7dfdf;
 }
 
 .BurgerButton {

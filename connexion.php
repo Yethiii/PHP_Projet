@@ -14,7 +14,8 @@ if (VerifierUtiSession()) {
 }
 
 ?>
-
+    <body class="page-connexion">
+<div class="contenu">
 <h1>Connexion</h1>
 
 <form method="post" action="" class="forms">
@@ -32,13 +33,14 @@ if (VerifierUtiSession()) {
     <br>
     <p id="motdepasse_invalide" class="error-message"><?= implode('<br>', ($arrayerrors['motdepasse'] ?? [])) ?></p>
 
-    <button type="submit">Me connecter</button>
+    <button type="submit" class="btn btn-secondary">Me connecter</button>
 
 </form>
 
 <p>Tu n'as pas encore de compte ? Inscrit-toi en cliquant <a href="/inscription.php">ici</a> !</p>
 </p>
 
+</div>
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pseudo = $_POST['pseudo'];
