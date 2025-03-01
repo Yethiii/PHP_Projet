@@ -109,20 +109,23 @@ nav {
     #menu {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 60px;
         /* Ajuster selon la hauteur de ton header */
         left: 0;
         width: 100%;
-        height: 100%;
-        background-color: white;
+        background-color: #035157;
         text-align: center;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        z-index: 1000;
 
     }
 
     /* Afficher le menu quand aria-expanded est true */
-    #menu[aria-expanded="false"] {
-        display: block;
+    #menu[aria-expanded="true"] {
+        display: flex;
     }
 
     /* Afficher le bouton hamburger */
@@ -132,9 +135,9 @@ nav {
 
     /* Modifier la disposition du menu */
     .menu {
-        flex-direction: column;
-        gap: 30px;
-        /* Réduire l'espacement entre les éléments du menu */
+        flex-direction: column; /* ✅ Un élément sous l'autre */
+        align-items: center;
+        gap: 20px;
     }
 ²
     .menu li {
@@ -144,7 +147,18 @@ nav {
     .menu a {
         font-size: 24px;
     }
+    .carousel-item img {
+         width: 100%;  /* Assure que l'image prend toute la largeur */
+         height: auto; /* Ajuste la hauteur proportionnellement */
+         max-height: 70vh; /* Ajuste selon ton design */
+         object-fit: cover; /* Évite la déformation de l'image */
+     }
+
+    .carousel-caption .btn {
+        display: none;
+    }
 }
+
 
 /* Partie CSS - Gestion des erreurs */
 .error-message {
