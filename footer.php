@@ -1,6 +1,6 @@
 </main>
 <footer>
-    <p>© Laetitia</p>
+    <p>© WebSite ByLaetitia</p>
 </footer>
 </body>
 

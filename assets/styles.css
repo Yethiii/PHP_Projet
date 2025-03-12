@@ -15,6 +15,16 @@ h1{
     color: #035157;
     margin-top: 30px;
 }
+footer {
+    text-align: center;
+    background-color: #035157;
+    text-decoration: none;
+    font-size: 27px;
+    font-family: 'Pacifico', serif;
+    color: #a7dfdf;
+    width: 100%;
+    padding: 10px 0;
+}
 
 header {
     padding: 15px 30px;
