@@ -1,58 +1,65 @@
+class BurgerMenu {
+    constructor(bouton) {
+        this.bouton = bouton;
+        this.menu = document.querySelector('#menu');
+        this.init();
+    }
 
-function OuvrirMenu(menu, bouton) {
-    menu.setAttribute("aria-expanded", "true");
-    menu.style.display = "flex"
-    bouton.setAttribute("aria-label", "Masquer le menu")
-};
+    init() {
+        if (this.estEnMobile()) {
+            this.fermerMenu();
+        } else {
+            this.menu.style.display = "flex";
+        }
 
-function FermerMenu(menu, bouton) {
-    menu.setAttribute("aria-expanded", "false");
-    menu.style.display = "none";
-    bouton.setAttribute("aria-label", "Ouvrir le menu");
-};
+        this.bouton.addEventListener('click', (e) => this.clickButton(e));
+        this.bouton.addEventListener('keydown', (e) => this.touchKey(e));
 
-function EstEnMobile() {
-    return window.innerWidth <= 768;
+        window.addEventListener('resize', () => this.handleResize());
+    }
+
+    ouvrirMenu() {
+        this.menu.setAttribute("aria-expanded", "true");
+        this.menu.style.display = "flex";
+        this.bouton.setAttribute("aria-label", "Masquer le menu");
+    }
+
+    fermerMenu() {
+        this.menu.setAttribute("aria-expanded", "false");
+        this.menu.style.display = "none";
+        this.bouton.setAttribute("aria-label", "Ouvrir le menu");
+    }
+
+    estEnMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    clickButton(e) {
+        e.preventDefault();
+
+        if (!this.estEnMobile()) return;
+
+        if (this.menu.getAttribute('aria-expanded') === "false") {
+            this.ouvrirMenu();
+        } else {
+            this.fermerMenu();
+        }
+    }
+
+    touchKey(e) {
+        if (!this.estEnMobile()) return;
+
+        if (e.key === "Enter" || e.key === " ") {
+            this.clickButton(e);
+        }
+    }
+
+    handleResize() {
+        if (this.estEnMobile()) {
+            this.fermerMenu();
+        } else {
+            this.menu.style.display = "flex";
+        }
+    }
 }
-const ClickButton = (e, bouton, menu) => {
-    // Éviter l'action par défaut lorsque l'on clique sur le bouton.
-    e.preventDefault();
-
-    if (!EstEnMobile()) return;
-
-    if (menu.getAttribute('aria-expanded') === "false") {
-        OuvrirMenu(menu,bouton);
-    } else {
-        FermerMenu(menu,bouton);
-    }
-};
-
-const TouchKey = (e, bouton, menu) => {
-    if (!EstEnMobile()) return;
-
-    if (e.key === "Enter" || e.key === " ") {  // " " pour espace
-        ClickButton(e, bouton, menu);
-    }
-};
-
-function BurgerMenu(bouton) {
-    const menu = document.querySelector('#menu')
-
-    if (EstEnMobile())
-    {FermerMenu(menu, bouton);}
-    else {
-        menu.style.display = "flex";
-    }
-    bouton.addEventListener('click', (e) => ClickButton(e, bouton, menu));
-    bouton.addEventListener('keydown', (e) => TouchKey(e, bouton, menu));
-};
-
-window.addEventListener('resize', () => {
-    if (EstEnModeMobile()) {
-        FermerMenu(menu, bouton);
-    } else {
-        menu.style.display = "flex";
-    }
-});
-
-export { BurgerMenu };
+export default BurgerMenu;
