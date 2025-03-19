@@ -3,9 +3,9 @@
 function ConfigConnexionBdd()
 {
     return [
-        'host' => 'localhost',
-        'username' => 'root',
-        'password' => '',
+        'host' => 'sql204.infinityfree.com',
+        'username' => 'if0_38557513',
+        'password' => 'az12er34ty567',
     ];
 }
 

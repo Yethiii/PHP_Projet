@@ -4,7 +4,7 @@ require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '/core
 function SelectUti_EMail($email)
 {
     try {
-        $pdo = ObtenirConnexionBdd('bdd_projet_web');
+        $pdo = ObtenirConnexionBdd('if0_38557513_siteweb');
 
         $requete = "SELECT * FROM t_utilisateur_uti WHERE uti_email = :email";
 
