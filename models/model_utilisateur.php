@@ -27,7 +27,7 @@ function SelectUti_EMail($email)
 function SelectUti_ID($id)
 {
     try {
-        $pdo = ObtenirConnexionBdd('bdd_projet_web');
+        $pdo = ObtenirConnexionBdd('if0_38557513_siteweb');
 
         $requete = "SELECT * FROM t_utilisateur_uti WHERE uti_id = :id";
 
@@ -53,7 +53,7 @@ function AjouterUti($nom, $prenom, $pseudo, $email, $motdepasse)
         return "Cet utilisateur existe déjà !";
     } else {
         try {
-            $pdo = ObtenirConnexionBdd('bdd_projet_web');
+            $pdo = ObtenirConnexionBdd('if0_38557513_siteweb');
             $email = strtolower($email);
 
             $requete = "INSERT INTO t_utilisateur_uti (uti_pseudo, uti_email, uti_nom, uti_prenom,uti_motdepasse) VALUES (:pseudo, :email, :nom, :prenom, :motdepasse)";
@@ -76,7 +76,7 @@ function AjouterUti($nom, $prenom, $pseudo, $email, $motdepasse)
 function ConnexionUti($pseudo, $motdepasse)
 {
     try {
-        $pdo = ObtenirConnexionBdd('bdd_projet_web');
+        $pdo = ObtenirConnexionBdd('if0_38557513_siteweb');
 
         $requete = "SELECT * FROM t_utilisateur_uti WHERE uti_pseudo = :pseudo";
 
